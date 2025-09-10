@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/categories.css">
-   
+
 </head>
 
 <body style="background-color: #f8f9fa; padding-top: 80px;">
@@ -27,8 +27,7 @@
                 </button>
 
                 <!-- Logo -->
-                <div class="logo"><img src="image/WhatsApp_Image_2025-09-09_at_11.26.30_AM-removebg-preview.png"
-                        alt="Logo"></div>
+                <div class="logo"><img src="image/20250910_091017.png" alt="Logo"></div>
 
                 <!-- Search (Desktop) -->
                 <div class="d-none d-md-block flex-grow-1 px-3">
@@ -232,7 +231,15 @@
         </div>
 
     </section>
-
+    <section>
+ <div class="text-center mt-4 mb-5 pb-3">
+        <button id="loadMoreBtn" class="btn btn-lg fw-bold text-white px-5 py-2"
+            style="background: linear-gradient(45deg,#14A768,#E90013); border-radius: 50px;">
+            <i class="fa-solid fa-angles-down me-2"></i> Load More
+        </button>
+    </div>
+    </section>
+   
 
 
     <!-- Offcanvas Menu -->
@@ -312,7 +319,7 @@
     <!--  Footer Active Toggle -->
     <script>
         // تحديد الـ active بناءً على URL الصفحة الحالية
-        const currentPath = window.location.pathname.split("/").pop(); // مثلاً "profile.html"
+        const currentPath = window.location.pathname.split("/").pop();
         const navLinks = document.querySelectorAll("footer .nav-item a");
 
         navLinks.forEach(link => {
