@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile application for store</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!--  Header -->
+    <header class="fixed-top">
+        <div class="container-fluid">
+            <div class="d-flex align-items-center justify-content-between">
+
+                <!-- Mobile menu -->
+                <button class="btn d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+                    <i class="fa-solid fa-bars text-light fs-2"></i>
+                </button>
+
+                <!-- Logo -->
+                <div class="logo"><img src="image/WhatsApp_Image_2025-09-09_at_11.26.30_AM-removebg-preview.png"
+                        alt="Logo"></div>
+
+                <!-- Search (Desktop) -->
+                <div class="d-none d-md-block flex-grow-1 px-3">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search here...">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+
+                <!-- Icons -->
+                <div class="icons d-flex align-items-center">
+                    <a href="favorite.html"> <i class="far fa-heart fs-2 me-2"></i></a>
+                    <a href="notifications.html"><i class="far fa-bell fs-2"></i></a>
+                </div>
+            </div>
+
+            <!-- Search (Mobile) -->
+            <div class="d-md-none mt-2">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search here...">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+
+            <!-- Horizontal List -->
+            <div class="container-list mt-2">
+                <ul class="list">
+                    <li><a href="#">All Item Groups</a></li>
+                    <li><a href="#">CHINA</a></li>
+                    <li><a href="#">BABY CARE</a></li>
+                    <li><a href="#">GOD CARES</a></li>
+                    <li><a href="#">FRAINE KITCHEN</a></li>
+                    <li><a href="#">AGRIC EQUIPMENTS</a></li>
+                    <li><a href="#">WINE & SPIRITS</a></li>
+                    <li><a href="#">STATIONARY</a></li>
+                    <li><a href="#">KITCHEN WARE</a></li>
+                    <li><a href="#">DOG SECTION</a></li>
+                    <li><a href="#">SSEMPA INV</a></li>
+                    <li><a href="#">SOFT DRINKS</a></li>
+                    <li><a href="#">FRAGOLINO</a></li>
+                    <li><a href="#">SOAP & DETERGENTS</a></li>
+                    <li><a href="#">COSMETICS</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!--  Main -->
+    <main>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="image/1756448578a65886065df4bbf89a380cd74c9624a1_thumbnail_1456x.webp"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="image/175671357997ae0f9ae32c4c1cf3ccf7040cfb326b_thumbnail_1456x.webp"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="image/17567940391ca8b20e85304ed27a266ee1f89f83d8.webp" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </main>
+
+    <!-- aside -->
+    <aside class="container-fluid">
+        <div class="d-flex overflow-auto gap-2 p-2">
+            <div class=" rounded d-flex align-items-center justify-content-center flex-shrink-0"
+                style="width:150px; height:50px;background-color: #fae5d4;color: #4e3013; ">
+                <h2 class="h6 m-0 ">Up To 90% Off <i class="fas fa-tag"></i></h2>
+            </div>
+            <div class=" rounded d-flex align-items-center justify-content-center flex-shrink-0"
+                style="width:150px; height:50px;background-color: #fae5d4;color: #4e3013;">
+                <h2 class="h6 m-0 ">Great offers <i class="fas fa-percent"></i></h2>
+            </div>
+            <div class=" rounded d-flex align-items-center justify-content-center flex-shrink-0"
+                style="width:150px; height:50px;background-color: #fae5d4;color: #4e3013;">
+                <h2 class="h6 m-0 ">Quick offers <i class="fas fa-tag"></i></h2>
+            </div>
+            <div class=" rounded d-flex align-items-center justify-content-center flex-shrink-0"
+                style="width:150px; height:50px;background-color: #fae5d4;color: #4e3013;">
+                <h2 class="h6 m-0 ">Flash Sale <i class="fas fa-hourglass-end"></i></h2>
+            </div>
+        </div>
+    </aside>
+
+    <!-- section 1 -->
+    <section class="py-3 bg-light">
+        <div class="container">
+            <div class="grid-slider">
+                <a href="all-product.html" class="text-dark text-decoration-none">
+                    <div class="circle-item text-center">
+                        <div class="circle"><img src="image/2EF0F78E-D4DA-423A-9037-DEBDD029B730.jpg" alt="Women"></div>
+                        <h6>Women</h6>
+                    </div>
+                </a>
+                <a href="all-product.html" class="text-dark text-decoration-none">
+                    <div class="circle-item text-center">
+                        <div class="circle"><img src="image/2EF0F78E-D4DA-423A-9037-DEBDD029B730.jpg" alt="Women"></div>
+                        <h6>Women</h6>
+                    </div>
+                </a>
+
+                <a href="all-product.html" class="text-dark text-decoration-none">
+                    <div class="circle-item text-center">
+                        <div class="circle"><img src="image/2EF0F78E-D4DA-423A-9037-DEBDD029B730.jpg" alt="Women"></div>
+                        <h6>Women</h6>
+                    </div>
+                </a>
+
+                <a href="all-product.html" class="text-dark text-decoration-none">
+                    <div class="circle-item text-center">
+                        <div class="circle"><img src="image/2EF0F78E-D4DA-423A-9037-DEBDD029B730.jpg" alt="Women"></div>
+                        <h6>Women</h6>
+                    </div>
+                </a>
+
+                <a href="all-product.html" class="text-dark text-decoration-none">
+                    <div class="circle-item text-center">
+                        <div class="circle"><img src="image/2EF0F78E-D4DA-423A-9037-DEBDD029B730.jpg" alt="Women"></div>
+                        <h6>Women</h6>
+                    </div>
+                </a>
+                <a href="all-product.html" class="text-dark text-decoration-none">
+                    <div class="circle-item text-center">
+                        <div class="circle"><img src="image/2EF0F78E-D4DA-423A-9037-DEBDD029B730.jpg" alt="Women"></div>
+                        <h6>Women</h6>
+                    </div>
+                </a>
+                <a href="all-product.html" class="text-dark text-decoration-none">
+                    <div class="circle-item text-center">
+                        <div class="circle"><img src="image/2EF0F78E-D4DA-423A-9037-DEBDD029B730.jpg" alt="Women"></div>
+                        <h6>Women</h6>
+                    </div>
+                </a>
+                <a href="all-product.html" class="text-dark text-decoration-none">
+                    <div class="circle-item text-center">
+                        <div class="circle"><img src="image/2EF0F78E-D4DA-423A-9037-DEBDD029B730.jpg" alt="Women"></div>
+                        <h6>Women</h6>
+                    </div>
+                </a>
+
+                <a href="all-product.html" class="text-dark text-decoration-none">
+                    <div class="circle-item text-center">
+                        <div class="circle"><img src="image/2EF0F78E-D4DA-423A-9037-DEBDD029B730.jpg" alt="Women"></div>
+                        <h6>Women</h6>
+                    </div>
+                </a>
+
+                <a href="all-product.html" class="text-dark text-decoration-none">
+                    <div class="circle-item text-center">
+                        <div class="circle"><img src="image/2EF0F78E-D4DA-423A-9037-DEBDD029B730.jpg" alt="Women"></div>
+                        <h6>Women</h6>
+                    </div>
+                </a>
+                <a href="all-product.html" class="text-dark text-decoration-none">
+                    <div class="circle-item text-center">
+                        <div class="circle"><img src="image/2EF0F78E-D4DA-423A-9037-DEBDD029B730.jpg" alt="Women"></div>
+                        <h6>Women</h6>
+                    </div>
+                </a>
+
+                <a href="all-product.html" class="text-dark text-decoration-none">
+                    <div class="circle-item text-center">
+                        <div class="circle"><img src="image/2EF0F78E-D4DA-423A-9037-DEBDD029B730.jpg" alt="Women"></div>
+                        <h6>Women</h6>
+                    </div>
+                </a>
+
+                <a href="all-product.html" class="text-dark text-decoration-none">
+                    <div class="circle-item text-center">
+                        <div class="circle"><img src="image/2EF0F78E-D4DA-423A-9037-DEBDD029B730.jpg" alt="Women"></div>
+                        <h6>Women</h6>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- section 2 -->
+    <section class="py-3 mt-1">
+        <div class="container">
+            <div class="cards-slider d-flex gap-3 overflow-x-auto pb-2">
+                <!-- Item -->
+                <a href="all-product.html" class="text-decoration-none">
+                    <div class="card-item-section2 text-center">
+                        <div class="card-section2">
+                            <img src="image/175671357997ae0f9ae32c4c1cf3ccf7040cfb326b_thumbnail_1456x.webp" alt="jpg">
+                        </div>
+                        <h6>Text 1</h6>
+                    </div>
+                </a>
+                <a href="all-product.html" class="text-decoration-none">
+
+                    <div class="card-item-section2 text-center">
+                        <div class="card-section2">
+                            <img src="image/17567940391ca8b20e85304ed27a266ee1f89f83d8.webp" alt="jpg">
+                        </div>
+                        <h6>Text 2</h6>
+                    </div>
+                </a>
+                <a href="all-product.html" class="text-decoration-none">
+
+                    <div class="card-item-section2 text-center">
+                        <div class="card-section2">
+                            <img src="image/2EF0F78E-D4DA-423A-9037-DEBDD029B730.jpg" alt="jpg">
+                        </div>
+                        <h6>Text 3</h6>
+                    </div>
+                </a>
+                <a href="all-product.html" class="text-decoration-none">
+
+                    <div class="card-item-section2 text-center">
+                        <div class="card-section2">
+                            <img src="image/175671357997ae0f9ae32c4c1cf3ccf7040cfb326b_thumbnail_1456x.webp" alt="jpg">
+                        </div>
+                        <h6>Text 4</h6>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!------- section 3---------- -->
+    <section class="py-3 section3">
+        <h6 class="ps-3 fw-bold d-inline">Shop Today's Deals</h6>
+        <SPan class="ms-5"><a class="span-card " href="all-product.html">Save big now!></a></SPan>
+        <div class="container pt-1">
+            <div class="card-slider d-flex gap-3 overflow-auto pb-2">
+                <a href="details-product.html">
+                    <div class="card-item text-center">
+                        <div class="card card-section2">
+                            <img src="image/2EF0F78E-D4DA-423A-9037-DEBDD029B730.jpg" alt="Women">
+                        </div>
+                        <h6>AED 84.23</h6>
+                    </div>
+                </a>
+                <a href="details-product.html">
+
+                    <div class="card-item text-center">
+                        <div class="card card-section2">
+                            <img src="image/17567940391ca8b20e85304ed27a266ee1f89f83d8.webp" alt="Women">
+                        </div>
+                        <h6>AED 62.48</h6>
+                    </div>
+                </a>
+                <a href="details-product.html">
+
+                    <div class="card-item text-center">
+                        <div class="card card-section2">
+                            <img src="image/images (2).png" alt="Women">
+                        </div>
+                        <h6>AED 88.01</h6>
+                    </div>
+                </a>
+                <a href="details-product.html">
+                    <div class="card-item text-center">
+                        <div class="card card-section2">
+                            <img src="image/175671357997ae0f9ae32c4c1cf3ccf7040cfb326b_thumbnail_1456x.webp"
+                                alt="Women">
+                        </div>
+                        <h6>AED 45.36</h6>
+                    </div>
+                </a>
+                <a href="details-product.html">
+                    <div class="card-item text-center">
+                        <div class="card card-section2">
+                            <img src="image/2EF0F78E-D4DA-423A-9037-DEBDD029B730.jpg" alt="man">
+                        </div>
+                        <h6>AED 99.65</h6>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ----------section 4 ------------------------ -->
+    <section class="py-3 ">
+        <div class="container  overflow-auto gap-3">
+
+            <section class="section4">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h6 class="fw-bold mb-0">New In DOG SECTION</h6>
+                    <!-- <a class="span-card-s4" href="#">Save big now!</a> -->
+                </div>
+                <div class="card-slider-section4 d-flex gap-3 overflow-x-auto pb-2">
+                    <a href="details-product.html">
+                        <div class="card-item-section4 text-center">
+                            <div class="card card-section4"><img
+                                    src="image/175671357997ae0f9ae32c4c1cf3ccf7040cfb326b_thumbnail_1456x.webp"
+                                    alt="Women"></div>
+                            <h6>AED 84.23</h6>
+                        </div>
+                    </a>
+                    <a href="details-product.html">
+                        <div class="card-item-section4 text-center">
+                            <div class="card card-section4"><img
+                                    src="image/17567940391ca8b20e85304ed27a266ee1f89f83d8.webp" alt="Women"></div>
+                            <h6>AED 62.48</h6>
+                        </div>
+                    </a>
+                    <a href="details-product.html">
+                        <div class="card-item-section4 text-center">
+                            <div class="card card-section4"><img
+                                    src="image/175671357997ae0f9ae32c4c1cf3ccf7040cfb326b_thumbnail_1456x.webp"
+                                    alt="Women"></div>
+                            <h6>AED 84.23</h6>
+                        </div>
+                    </a>
+                    <a href="details-product.html">
+                        <div class="card-item-section4 text-center">
+                            <div class="card card-section4"><img
+                                    src="image/17567940391ca8b20e85304ed27a266ee1f89f83d8.webp" alt="Women"></div>
+                            <h6>AED 62.48</h6>
+                        </div>
+                    </a> <a href="details-product.html">
+                        <div class="card-item-section4 text-center">
+                            <div class="card card-section4"><img
+                                    src="image/175671357997ae0f9ae32c4c1cf3ccf7040cfb326b_thumbnail_1456x.webp"
+                                    alt="Women"></div>
+                            <h6>AED 84.23</h6>
+                        </div>
+                    </a>
+                    <a href="details-product.html">
+                        <div class="card-item-section4 text-center">
+                            <div class="card card-section4"><img
+                                    src="image/17567940391ca8b20e85304ed27a266ee1f89f83d8.webp" alt="Women"></div>
+                            <h6>AED 62.48</h6>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <section class="section4">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h6 class="fw-bold mb-0">Items & Deals That You'd Be Interested In</h6>
+                    <!-- <a class="span-card-s4" href="#">Save big now!</a> -->
+                </div>
+                <div class="card-slider-section4 d-flex gap-3 overflow-x-auto pb-2">
+                    <a href="details-product.html">
+                        <div class="card-item-section4 text-center">
+                            <div class="card card-section4"><img src="image/images (2).png" alt="Women"></div>
+                            <h6>AED 45.36</h6>
+                        </div>
+                    </a>
+                    <a href="details-product.html">
+                        <div class="card-item-section4 text-center">
+                            <div class="card card-section4"><img
+                                    src="image/1756448578a65886065df4bbf89a380cd74c9624a1_thumbnail_1456x.webp"
+                                    alt="Women"></div>
+                            <h6>AED 99.65</h6>
+                        </div>
+                    </a>
+                    <a href="details-product.html">
+                        <div class="card-item-section4 text-center">
+                            <div class="card card-section4"><img src="image/images (2).png" alt="Women"></div>
+                            <h6>AED 45.36</h6>
+                        </div>
+                    </a>
+                    <a href="details-product.html">
+                        <div class="card-item-section4 text-center">
+                            <div class="card card-section4"><img
+                                    src="image/1756448578a65886065df4bbf89a380cd74c9624a1_thumbnail_1456x.webp"
+                                    alt="Women"></div>
+                            <h6>AED 99.65</h6>
+                        </div>
+                    </a> <a href="details-product.html">
+                        <div class="card-item-section4 text-center">
+                            <div class="card card-section4"><img src="image/images (2).png" alt="Women"></div>
+                            <h6>AED 45.36</h6>
+                        </div>
+                    </a>
+                    <a href="details-product.html">
+                        <div class="card-item-section4 text-center">
+                            <div class="card card-section4"><img
+                                    src="image/1756448578a65886065df4bbf89a380cd74c9624a1_thumbnail_1456x.webp"
+                                    alt="Women"></div>
+                            <h6>AED 99.65</h6>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+        </div>
+    </section>
+
+    <!-- ---------section 5 ---------------------- -->
+    <section class="py-3">
+        <div class="container">
+            <h2 class="h2-section5 pb-2">Curated Stores For You</h2>
+            <div class="row g-3">
+
+                <!-- Card 1 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <a href="details-product.html" class="card-link">
+                        <div class="card custom-card">
+                            <img src="image/2EF0F78E-D4DA-423A-9037-DEBDD029B730.jpg" class="card-img-top" alt="Women">
+                            <div class="card-body p-2">
+                                <p class="card-text description">Trendy Women Dress</p>
+                                <div class="price-box">
+                                    <span class="price-new">AED 45.36</span>
+                                    <span class="price-old">AED 99.65</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <a href="details-product.html" class="card-link">
+                        <div class="card custom-card">
+                            <img src="image/175671357997ae0f9ae32c4c1cf3ccf7040cfb326b_thumbnail_1456x.webp"
+                                class="card-img-top" alt="Shoes">
+                            <div class="card-body p-2">
+                                <p class="card-text description">Sporty Sneakers</p>
+                                <div class="price-box">
+                                    <span class="price-new">AED 88.01</span>
+                                    <span class="price-old">AED 150.99</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <a href="details-product.html" class="card-link">
+                        <div class="card custom-card">
+                            <img src="image/17567940391ca8b20e85304ed27a266ee1f89f83d8.webp" class="card-img-top"
+                                alt="Bag">
+                            <div class="card-body p-2">
+                                <p class="card-text description">Stylish Handbag</p>
+                                <div class="price-box">
+                                    <span class="price-new">AED 62.48</span>
+                                    <span class="price-old">AED 110.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <a href="details-product.html" class="card-link">
+                        <div class="card custom-card">
+                            <img src="image/17567940391ca8b20e85304ed27a266ee1f89f83d8.webp" class="card-img-top"
+                                alt="Watch">
+                            <div class="card-body p-2">
+                                <p class="card-text description">Luxury Watch</p>
+                                <div class="price-box">
+                                    <span class="price-new">AED 84.23</span>
+                                    <span class="price-old">AED 130.50</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <a href="details-product.html" class="card-link">
+                        <div class="card custom-card">
+                            <img src="image/2EF0F78E-D4DA-423A-9037-DEBDD029B730.jpg" class="card-img-top" alt="Women">
+                            <div class="card-body p-2">
+                                <p class="card-text description">Trendy Women Dress</p>
+                                <div class="price-box">
+                                    <span class="price-new">AED 45.36</span>
+                                    <span class="price-old">AED 99.65</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <a href="details-product.html" class="card-link">
+                        <div class="card custom-card">
+                            <img src="image/175671357997ae0f9ae32c4c1cf3ccf7040cfb326b_thumbnail_1456x.webp"
+                                class="card-img-top" alt="Shoes">
+                            <div class="card-body p-2">
+                                <p class="card-text description">Sporty Sneakers</p>
+                                <div class="price-box">
+                                    <span class="price-new">AED 88.01</span>
+                                    <span class="price-old">AED 150.99</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <a href="details-product.html" class="card-link">
+                        <div class="card custom-card">
+                            <img src="image/17567940391ca8b20e85304ed27a266ee1f89f83d8.webp" class="card-img-top"
+                                alt="Bag">
+                            <div class="card-body p-2">
+                                <p class="card-text description">Stylish Handbag</p>
+                                <div class="price-box">
+                                    <span class="price-new">AED 62.48</span>
+                                    <span class="price-old">AED 110.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <a href="details-product.html" class="card-link">
+                        <div class="card custom-card">
+                            <img src="image/17567940391ca8b20e85304ed27a266ee1f89f83d8.webp" class="card-img-top"
+                                alt="Watch">
+                            <div class="card-body p-2">
+                                <p class="card-text description">Luxury Watch</p>
+                                <div class="price-box">
+                                    <span class="price-new">AED 84.23</span>
+                                    <span class="price-old">AED 130.50</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- --------- Footer----- -->
+    <footer>
+        <div class="nav-item active">
+            <a href="index.html">
+                <i class="fa-solid fa-store"></i>
+                <span>Shop</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="categories.html">
+                <i class="fa-solid fa-th-large"></i>
+                <span>Categories</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="trends.html">
+                <i class="fa-solid fa-fire"></i>
+                <span>Trends</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="cart.html">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span>Cart</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="profile.html">
+                <i class="fa-solid fa-user"></i>
+                <span>Profile</span>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Offcanvas Menu -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title fw-bold fs-3">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <hr>
+
+        <div class="offcanvas-body">
+            <ul class="list-unstyled">
+                <li class="border-bottom">
+                    <a href="about.html" class="text-dark text-decoration-none d-block py-2 fs-5">
+                        <i class="fas fa-info me-2 fs-3" style="color: #E90013;"></i> About Us
+                    </a>
+                </li>
+                <li class="border-bottom mt-3">
+                    <a href="privacy-policy.html" class="text-dark text-decoration-none d-block py-2 fs-5">
+                        <i class="fas fa-lock me-2 fs-3" style="color: #E90013;"></i> Privacy Policy
+                    </a>
+                </li>
+                <li class="border-bottom mt-3">
+                    <a href="contactus.html" class="text-dark text-decoration-none d-block py-2 fs-5">
+                        <i class="fas fa-envelope-open me-2 fs-3" style="color: #E90013;"></i> Contact Us
+                    </a>
+                </li>
+                <li class="border-bottom mt-3">
+                    <a href="setteing.html" class="text-dark text-decoration-none d-block py-2 fs-5">
+                        <i class="fas fa-wrench me-2 fs-3" style="color: #E90013;"></i> Settings
+                    </a>
+                </li>
+                <li class="mt-3">
+                    <a href="login.html" class="text-dark text-decoration-none d-block py-2 fs-5">
+                        <i class="fas fa-door-open me-2 fs-3" style="color: #E90013;"></i> Login
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!--  Footer Active Toggle -->
+    <script>
+        // تحديد الـ active بناءً على URL الصفحة الحالية
+        const currentPath = window.location.pathname.split("/").pop(); // مثلاً "profile.html"
+        const navLinks = document.querySelectorAll("footer .nav-item a");
+
+        navLinks.forEach(link => {
+            // إزالة الــactive من جميعها أولاً
+            link.classList.remove("active");
+            // إذا كان href يساوي الصفحة الحالية، أو إذا كان الرابط يعيد إلى index.html حين تكون الصفحة الرئيسية
+            const href = link.getAttribute("href");
+            if (href === currentPath || (href === "index.html" && (currentPath === "" || currentPath === "/"))) {
+                link.classList.add("active");
+            }
+        });
+
+        // تبقي الـ behavior عند النقر كما هو دون تغيير
+        navLinks.forEach(item => {
+            item.addEventListener("click", () => {
+                navLinks.forEach(el => el.classList.remove("active"));
+                item.classList.add("active");
+            });
+        });
+    </script>
+
+    <script>
+        const slider = document.querySelector('.cards-slider');
+        const cards = document.querySelectorAll('.card-item-section2');
+
+        slider.addEventListener('scroll', () => {
+            let center = slider.scrollLeft + slider.offsetWidth / 2;
+            let closestCard = null;
+            let minDistance = Infinity;
+
+            cards.forEach(card => {
+                const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+                const distance = Math.abs(center - cardCenter);
+
+                if (distance < minDistance) {
+                    minDistance = distance;
+                    closestCard = card;
+                }
+            });
+
+            // إزالة active من كل الكروت
+            cards.forEach(card => card.classList.remove('active-card'));
+            if (closestCard) closestCard.classList.add('active-card');
+        });
+    </script>
+
+
+    <script>
+        const listItems = document.querySelectorAll(".list li a");
+        listItems.forEach(item => {
+            item.addEventListener("click", () => {
+                listItems.forEach(el => el.classList.remove("active"));
+                item.classList.add("active");
+            });
+        });
+    </script>
+</body>
+
+</html>

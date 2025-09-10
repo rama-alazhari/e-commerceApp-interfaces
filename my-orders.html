@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/header.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            background: #f9f9f9;
+            padding-top: 80px;
+        }
+
+        .order-card {
+            border-radius: 12px;
+            padding: 15px;
+            background: #fff;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+            margin-bottom: 15px;
+            transition: 0.2s;
+        }
+
+        .order-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .order-img {
+            height: 80px;
+            width: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .order-status {
+            font-weight: bold;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        .status-pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .status-shipped {
+            background: #cce5ff;
+            color: #004085;
+        }
+
+        .status-completed {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status-cancelled {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .sub-header {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .sub-header-link {
+            font-weight: 600;
+            font-size: 1.3rem;
+            /* تكبير الخط */
+            color: #555;
+            padding: 8px 12px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .sub-header-link:hover {
+            background-color: #f8f8f8;
+            color: #E90013;
+        }
+
+        .sub-header-link.active {
+            color: #E90013;
+            font-weight: 700;
+            border-bottom: 3px solid #E90013;
+        }
+    </style>
+</head>
+
+<body>
+    <!--  Header -->
+    <header class="fixed-top">
+        <div class="container-fluid">
+            <div class="d-flex align-items-center justify-content-between">
+
+                <!-- Mobile menu -->
+                <button class="btn d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+                    <i class="fa-solid fa-bars text-light fs-2"></i>
+                </button>
+
+                <!-- Logo -->
+                <div class="logo"><a href="/"><img
+                            src="image/WhatsApp_Image_2025-09-09_at_11.26.30_AM-removebg-preview.png" alt="Logo"></a>
+                </div>
+
+                <!-- Icons -->
+                <div class="icons d-flex align-items-center">
+                    <a href="favorite.html"> <i class="far fa-heart fs-2 me-2"></i></a>
+                    <a href="notifications.html"> <i class="far fa-bell fs-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sub-header under main header -->
+    <div class="sub-header bg-light shadow-sm py-3">
+        <div class="container d-flex justify-content-between align-items-center ps-5 pe-5 pt-2">
+            <a href="profile.html" class="sub-header-link fw-bold">Profile</a>
+            <span class="fs-1" style="color: #555;">|</span>
+            <a href="my-orders.html" class="sub-header-link fw-bold active">My Orders</a>
+        </div>
+    </div>
+
+    <!-- Filter -->
+    <div class="container">
+        <h5 class="mb-0 fw-bold text-center mb-4 bg-light fs-2 mt-5">My Orders</h5>
+
+        <select class="form-select shadow-sm" id="orderFilter">
+            <option value="all">All Orders</option>
+            <option value="pending">Pending</option>
+            <option value="shipped">Shipped</option>
+            <option value="completed">Completed</option>
+            <option value="cancelled">Cancelled</option>
+        </select>
+    </div>
+
+    <!-- Orders List -->
+    <div class="container mt-3" id="ordersList">
+        <a href="order-details.html" class="text-decoration-none text-dark">
+            <div class="order-card" data-status="pending">
+                <div class="d-flex align-items-center">
+                    <img src="image/175671357997ae0f9ae32c4c1cf3ccf7040cfb326b_thumbnail_1456x.webp"
+                        class="order-img me-3" alt="Product">
+                    <div>
+                        <h6 class="fw-bold mb-1">Nike Air Max Shoes</h6>
+                        <p class="mb-1 text-muted">Date: 01/09/2025</p>
+                        <span class="fw-bold text-danger">350 AED</span>
+                    </div>
+                    <div class="ms-auto">
+                        <span class="order-status status-pending">Pending</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="order-details.html" class="text-decoration-none text-dark">
+            <div class="order-card" data-status="shipped">
+                <div class="d-flex align-items-center">
+                    <img src="image/1756448578a65886065df4bbf89a380cd74c9624a1_thumbnail_1456x.webp"
+                        class="order-img me-3" alt="Product">
+                    <div>
+                        <h6 class="fw-bold mb-1">Adidas Sneakers</h6>
+                        <p class="mb-1 text-muted">Date: 05/09/2025</p>
+                        <span class="fw-bold text-danger">280 AED</span>
+                    </div>
+                    <div class="ms-auto">
+                        <span class="order-status status-shipped">Shipped</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="order-details.html" class="text-decoration-none text-dark">
+            <div class="order-card" data-status="completed">
+                <div class="d-flex align-items-center">
+                    <img src="image/17567940391ca8b20e85304ed27a266ee1f89f83d8.webp" class="order-img me-3"
+                        alt="Product">
+                    <div>
+                        <h6 class="fw-bold mb-1">Puma Running Shoes</h6>
+                        <p class="mb-1 text-muted">Date: 10/09/2025</p>
+                        <span class="fw-bold text-danger">299 AED</span>
+                    </div>
+                    <div class="ms-auto">
+                        <span class="order-status status-completed">Completed</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <!-- Offcanvas Menu -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title fw-bold fs-3">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <hr>
+
+        <div class="offcanvas-body">
+            <ul class="list-unstyled">
+                <li class="border-bottom">
+                    <a href="about.html" class="text-dark text-decoration-none d-block py-2 fs-5">
+                        <i class="fas fa-info me-2 fs-3" style="color: #E90013;"></i> About Us
+                    </a>
+                </li>
+                <li class="border-bottom mt-3">
+                    <a href="privacy-policy.html" class="text-dark text-decoration-none d-block py-2 fs-5">
+                        <i class="fas fa-lock me-2 fs-3" style="color: #E90013;"></i> Privacy Policy
+                    </a>
+                </li>
+                <li class="border-bottom mt-3">
+                    <a href="contactus.html" class="text-dark text-decoration-none d-block py-2 fs-5">
+                        <i class="fas fa-envelope-open me-2 fs-3" style="color: #E90013;"></i> Contact Us
+                    </a>
+                </li>
+                <li class="border-bottom mt-3">
+                    <a href="setteing.html" class="text-dark text-decoration-none d-block py-2 fs-5">
+                        <i class="fas fa-wrench me-2 fs-3" style="color: #E90013;"></i> Settings
+                    </a>
+                </li>
+                <li class="mt-3">
+                    <a href="login.html" class="text-dark text-decoration-none d-block py-2 fs-5">
+                        <i class="fas fa-door-open me-2 fs-3" style="color: #E90013;"></i> Login
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const filter = document.getElementById("orderFilter");
+        const orders = document.querySelectorAll(".order-card");
+
+        filter.addEventListener("change", () => {
+            const value = filter.value;
+            orders.forEach(order => {
+                if (value === "all" || order.dataset.status === value) {
+                    order.style.display = "block";
+                } else {
+                    order.style.display = "none";
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

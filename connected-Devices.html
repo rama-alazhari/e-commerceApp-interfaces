@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connected Devices</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/header.css">
+
+    <style>
+        body {
+            background: #f8f9fa;
+            font-family: "Tajawal", sans-serif;
+        }
+
+        .device-card {
+            background: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+        }
+
+        .logout-btn {
+            color: #fff;
+            background: #E90013;
+            border: none;
+            border-radius: 10px;
+            padding: 5px 12px;
+        }
+
+        .logout-btn:hover {
+            opacity: 0.85;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--  Header -->
+    <header class="fixed-top">
+        <div class="container-fluid">
+            <div class="d-flex align-items-center justify-content-between">
+
+                <!-- Mobile menu -->
+                <button class="btn d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+                    <i class="fa-solid fa-bars text-light fs-2"></i>
+                </button>
+
+                <!-- Logo -->
+                <div class="logo"><a href="/"><img
+                            src="image/WhatsApp_Image_2025-09-09_at_11.26.30_AM-removebg-preview.png" alt="Logo"></a>
+                </div>
+
+                <!-- Icons -->
+                <div class="icons d-flex align-items-center">
+                    <a href="favorite.html"> <i class="far fa-heart fs-2 me-2"></i></a>
+                    <a href="notifications.html"> <i class="far fa-bell fs-2"></i></a>
+                </div>
+            </div>
+
+
+        </div>
+    </header>
+    <section>
+        <div class="container my-4 mt-5 pt-4">
+            <h3 class="mb-4"><i class="bi bi-laptop"></i> Connected Devices</h3>
+            <p>Manage the devices currently connected to your account.</p>
+
+            <div class="device-card d-flex justify-content-between align-items-center">
+                <div>
+                    <h6><i class="bi bi-phone"></i> iPhone 14 Pro</h6>
+                    <p class="mb-0 text-muted">iOS 17 • Dubai, UAE<br>Last active: 2 hours ago</p>
+                </div>
+                <button class="logout-btn">Log out</button>
+            </div>
+
+            <div class="device-card d-flex justify-content-between align-items-center">
+                <div>
+                    <h6><i class="bi bi-laptop"></i> MacBook Air</h6>
+                    <p class="mb-0 text-muted">macOS Ventura • Sharjah, UAE<br>Last active: Yesterday</p>
+                </div>
+                <button class="logout-btn">Log out</button>
+            </div>
+
+            <div class="device-card d-flex justify-content-between align-items-center">
+                <div>
+                    <h6><i class="bi bi-tablet"></i> Samsung Tablet</h6>
+                    <p class="mb-0 text-muted">Android 13 • Abu Dhabi, UAE<br>Last active: 5 days ago</p>
+                </div>
+                <button class="logout-btn">Log out</button>
+            </div>
+        </div>
+    </section>
+    <!-- Offcanvas Menu -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title fw-bold fs-3">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <hr>
+
+        <div class="offcanvas-body">
+            <ul class="list-unstyled">
+                <li class="border-bottom">
+                    <a href="about.html" class="text-dark text-decoration-none d-block py-2 fs-5">
+                        <i class="fas fa-info me-2 fs-3" style="color: #E90013;"></i> About Us
+                    </a>
+                </li>
+                <li class="border-bottom mt-3">
+                    <a href="privacy-policy.html" class="text-dark text-decoration-none d-block py-2 fs-5">
+                        <i class="fas fa-lock me-2 fs-3" style="color: #E90013;"></i> Privacy Policy
+                    </a>
+                </li>
+                <li class="border-bottom mt-3">
+                    <a href="contactus.html" class="text-dark text-decoration-none d-block py-2 fs-5">
+                        <i class="fas fa-envelope-open me-2 fs-3" style="color: #E90013;"></i> Contact Us
+                    </a>
+                </li>
+                <li class="border-bottom mt-3">
+                    <a href="setteing.html" class="text-dark text-decoration-none d-block py-2 fs-5">
+                        <i class="fas fa-wrench me-2 fs-3" style="color: #E90013;"></i> Settings
+                    </a>
+                </li>
+                <li class="mt-3">
+                    <a href="login.html" class="text-dark text-decoration-none d-block py-2 fs-5">
+                        <i class="fas fa-door-open me-2 fs-3" style="color: #E90013;"></i> Login
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

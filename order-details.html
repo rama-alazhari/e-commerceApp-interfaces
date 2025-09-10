@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            background: #f9f9f9;
+            padding-top: 80px;
+        }
+
+        .section-card {
+            border-radius: 12px;
+            padding: 15px;
+            background: #fff;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+            margin-bottom: 15px;
+        }
+
+        .order-status {
+            font-weight: bold;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        .status-pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .status-shipped {
+            background: #cce5ff;
+            color: #004085;
+        }
+
+        .status-completed {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status-cancelled {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .product-img {
+            height: 70px;
+            width: 70px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="fixed-top bg-dark text-white py-3 shadow-sm">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="javascript:void(0);" onclick="history.back(); return false;" class="text-white fs-5"><i class="fa-solid fa-arrow-left"></i></a>
+            <h5 class="mb-0 fw-bold">Order Details</h5>
+            <span></span>
+        </div>
+    </header>
+
+    <div class="container mt-3">
+
+        <!-- Order Info -->
+        <div class="section-card">
+            <h6 class="fw-bold mb-2">Order Information</h6>
+            <p class="mb-1">Order Number: <span class="fw-semibold">#12345</span></p>
+            <p class="mb-1">Date: <span class="fw-semibold">09/09/2025</span></p>
+            <p class="mb-0">Status:
+                <span class="order-status status-shipped">Shipped</span>
+            </p>
+        </div>
+
+        <!-- Address -->
+        <div class="section-card">
+            <h6 class="fw-bold mb-2">Shipping Address</h6>
+            <p class="mb-1"><i class="fa-solid fa-user me-2"></i>rama alazhari</p>
+            <p class="mb-1"><i class="fa-solid fa-phone me-2"></i>+971 000 000</p>
+            <p class="mb-0"><i class="fa-solid fa-location-dot me-2"></i>Dubai Marina, address</p>
+        </div>
+
+        <!-- Products -->
+        <div class="section-card">
+            <h6 class="fw-bold mb-3">Products</h6>
+
+            <div class="d-flex align-items-center mb-3">
+                <img src="image/17567940391ca8b20e85304ed27a266ee1f89f83d8.webp" class="product-img me-3" alt="Product">
+                <div>
+                    <h6 class="mb-1">Nike Air Max Shoes</h6>
+                    <p class="mb-0 text-muted">Qty: 1</p>
+                    <span class="fw-bold text-danger">350 AED</span>
+                </div>
+            </div>
+
+            <div class="d-flex align-items-center">
+                <img src="image/1756448578a65886065df4bbf89a380cd74c9624a1_thumbnail_1456x.webp" class="product-img me-3" alt="Product">
+                <div>
+                    <h6 class="mb-1">Adidas Sneakers</h6>
+                    <p class="mb-0 text-muted">Qty: 2</p>
+                    <span class="fw-bold text-danger">560 AED</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Payment Summary -->
+        <div class="section-card">
+            <h6 class="fw-bold mb-3">Payment Summary</h6>
+            <div class="d-flex justify-content-between mb-1">
+                <span>Subtotal</span>
+                <span>910 AED</span>
+            </div>
+            <div class="d-flex justify-content-between mb-1">
+                <span>Discount</span>
+                <span>-50 AED</span>
+            </div>
+            <div class="d-flex justify-content-between fw-bold">
+                <span>Total</span>
+                <span class="text-danger">860 AED</span>
+            </div>
+        </div>
+    </div>
+
+  <!-- Order Tracking -->
+    <div class="text-center mb-4">
+      <a href="order-tracking.html" class="btn btn-dark px-4 p-3 fw-bold"><i class="fa-solid fa-arrow-left me-2"></i>📦 Track Your Order</a>
+    </div>
+  </div>
+
+</body>
+
+</html>

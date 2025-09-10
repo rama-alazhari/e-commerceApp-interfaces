@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Addresses</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+      <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/header.css">
+  <style>
+    body {
+      font-family: "Tajawal", sans-serif;
+      background: #f8f9fa;
+    }
+
+    .address-card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 20px;
+      margin-bottom: 15px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .default-badge {
+      background: #14A768;
+      color: white;
+      font-size: 0.8rem;
+      padding: 4px 10px;
+      border-radius: 10px;
+      margin-left: 8px;
+    }
+
+    .action-btns i {
+      font-size: 1.2rem;
+      cursor: pointer;
+      margin-left: 15px;
+      transition: 0.2s;
+    }
+
+    .action-btns i:hover {
+      color: #E90013;
+    }
+
+    .btn-add {
+      background: #E90013;
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      padding: 12px 20px;
+      font-weight: bold;
+      width: 100%;
+      margin-top: 10px;
+      transition: 0.3s;
+    }
+
+    .btn-add:hover {
+      background: #E90013;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 90%;
+      max-width: 400px;
+      height: 100%;
+      background: #fff;
+      box-shadow: -3px 0 10px rgba(0,0,0,0.2);
+      z-index: 1050;
+      transition: right 0.4s ease;
+      overflow-y: auto;
+      padding: 20px;
+    }
+
+    .sidebar.active {
+      right: 0;
+    }
+
+    .sidebar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.4);
+      display: none;
+      z-index: 1040;
+    }
+
+    .overlay.active {
+      display: block;
+    }
+
+    .form-control {
+      border-radius: 10px;
+    }
+
+    .btn-confirm {
+      background: linear-gradient(45deg, #14A768, #5ac697);
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 12px;
+      padding: 12px;
+      width: 100%;
+      transition: 0.3s;
+      margin-top: 10px;
+    }
+
+    .btn-confirm:hover {
+      opacity: 0.9;
+    }
+
+    .btn-cancel {
+      background: #6c757d;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      padding: 12px;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .btn-cancel:hover {
+      opacity: 0.9;
+    }
+
+    #officeOptions {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+   <!--  Header -->
+  <header class="fixed-top">
+    <div class="container-fluid">
+      <div class="d-flex align-items-center justify-content-between">
+
+        <!-- Mobile menu -->
+        <button class="btn d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+          <i class="fa-solid fa-bars text-light fs-2"></i>
+        </button>
+
+        <!-- Logo -->
+        <div class="logo"><a href="/"><img src="image/WhatsApp_Image_2025-09-09_at_11.26.30_AM-removebg-preview.png"
+              alt="Logo"></a>
+        </div>
+
+        <!-- Icons -->
+        <div class="icons d-flex align-items-center">
+          <a href="favorite.html"> <i class="far fa-heart fs-2 me-2"></i></a>
+          <a href="notifications.html"> <i class="far fa-bell fs-2"></i></a>
+        </div>
+      </div>
+
+
+    </div>
+  </header>
+  
+  <div class="container py-4 pt-5 mt-4">
+    <h3 class="fw-bold text-center mb-4">📍 Manage Addresses</h3>
+
+    <!-- Example Address 1 -->
+    <div class="address-card" data-id="1">
+      <div class="d-flex justify-content-between align-items-start">
+        <div>
+          <h6 class="fw-bold">🏠 Home <span class="default-badge">Default</span></h6>
+          <p class="mb-1"><strong>Rama alazhari</strong> | +971 000 000</p>
+          <p class="mb-1">Street 12, addess </p>
+          <p class="mb-1">Dubai, Business Bay</p>
+          <p class="mb-0 text-muted">Near Dubai Mall</p>
+        </div>
+        <div class="action-btns">
+          <i class="bi bi-pencil-square edit-btn" style="color: #14A768;" title="Edit"></i>
+          <i class="bi bi-trash3 delete-btn" style="color: #E90013;" title="Delete"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Example Address 2 -->
+    <div class="address-card" data-id="2">
+      <div class="d-flex justify-content-between align-items-start">
+        <div>
+          <h6 class="fw-bold">🏢 Office</h6>
+          <p class="mb-1"><strong>Rama alazhari</strong> | +971 000 000</p>
+          <p class="mb-1">Sheikh, address </p>
+          <p class="mb-1">Dubai, Trade Center</p>
+          <p class="mb-0 text-muted">Near Dubai Mall</p>
+        </div>
+        <div class="action-btns">
+          <i class="bi bi-pencil-square edit-btn" style="color: #14A768;" title="Edit"></i>
+          <i class="bi bi-trash3 delete-btn" style="color: #E90013;" title="Delete"></i>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn-add" id="addAddressBtn"><i class="bi bi-plus-circle"></i> Add New Address</button>
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Sidebar Add/Edit Address -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <h5 id="sidebarTitle">➕ Add Address</h5>
+      <button class="btn-close" id="closeSidebar"></button>
+    </div>
+    <form id="addressForm">
+      <div class="mb-3">
+        <label class="form-label">Address Name</label>
+        <input type="text" class="form-control" id="addrName" placeholder="Example: Home/Office">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Mobile</label>
+        <input type="tel" class="form-control" id="addrMobile" placeholder="+971 5xxxxxxx">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Street</label>
+        <input type="text" class="form-control" id="addrStreet" placeholder="Street Name">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Building Name</label>
+        <input type="text" class="form-control" id="addrBuilding" placeholder="Tower/Complex/Villa">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">City</label>
+        <input type="text" class="form-control" id="addrCity" placeholder="City">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Area / District</label>
+        <input type="text" class="form-control" id="addrArea" placeholder="Area/District">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Nearest Landmark</label>
+        <input type="text" class="form-control" id="addrLandmark" placeholder="Example: Near Mall">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Address Type</label>
+        <div class="d-flex gap-3">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="addrType" id="home" value="Home" checked>
+            <label class="form-check-label" for="home">🏠 Home</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="addrType" id="office" value="Office">
+            <label class="form-check-label" for="office">🏢 Office</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Office options -->
+      <div id="officeOptions" class="mt-3" style="display:none;">
+                <div class="mb-3">
+                    <label class="form-label">📅 Office Availability</label>
+                    <div class="d-flex gap-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="officeAvailability" id="holiday"
+                                value="holiday">
+                            <label class="form-check-label" for="holiday">Saturday Open</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="officeAvailability" id="noHoliday"
+                                value="noHoliday">
+                            <label class="form-check-label" for="noHoliday">Sunday Open</label>
+                        </div>
+                    </div>
+                </div>
+
+        <div class="form-check mb-2">
+          <input class="form-check-input" type="checkbox" id="callBefore">
+          <label class="form-check-label" for="callBefore">📞 Call before delivery</label>
+        </div>
+        <div class="form-check mb-2">
+          <input class="form-check-input" type="checkbox" id="redirectHome">
+          <label class="form-check-label" for="redirectHome">🏠 In my Absence → Deliver the Order Home</label>
+        </div>
+      </div>
+
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" id="defaultAddressForm">
+        <label class="form-check-label" for="defaultAddressForm">Set as Default</label>
+      </div>
+
+      <button type="submit" class="btn-confirm" id="saveBtn">Save</button>
+      <button type="button" class="btn-cancel" id="cancelBtn">Cancel</button>
+    </form>
+  </div>
+
+   <!-- Offcanvas Menu -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title fw-bold fs-3">Menu</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <hr>
+
+    <div class="offcanvas-body">
+      <ul class="list-unstyled">
+        <li class="border-bottom">
+          <a href="about.html" class="text-dark text-decoration-none d-block py-2 fs-5">
+            <i class="fas fa-info me-2 fs-3" style="color: #E90013;"></i> About Us
+          </a>
+        </li>
+        <li class="border-bottom mt-3">
+          <a href="privacy-policy.html" class="text-dark text-decoration-none d-block py-2 fs-5">
+            <i class="fas fa-lock me-2 fs-3" style="color: #E90013;"></i> Privacy Policy
+          </a>
+        </li>
+        <li class="border-bottom mt-3">
+          <a href="contactus.html" class="text-dark text-decoration-none d-block py-2 fs-5">
+            <i class="fas fa-envelope-open me-2 fs-3" style="color: #E90013;"></i> Contact Us
+          </a>
+        </li>
+        <li class="border-bottom mt-3">
+          <a href="setteing.html" class="text-dark text-decoration-none d-block py-2 fs-5">
+            <i class="fas fa-wrench me-2 fs-3" style="color: #E90013;"></i> Settings
+          </a>
+        </li>
+        <li class="mt-3">
+          <a href="login.html" class="text-dark text-decoration-none d-block py-2 fs-5">
+            <i class="fas fa-door-open me-2 fs-3" style="color: #E90013;"></i> Login
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const sidebar = document.getElementById("sidebar");
+    const overlay = document.getElementById("overlay");
+    const addBtn = document.getElementById("addAddressBtn");
+    const closeSidebar = document.getElementById("closeSidebar");
+    const officeRadio = document.getElementById("office");
+    const homeRadio = document.getElementById("home");
+    const officeOptions = document.getElementById("officeOptions");
+    const sidebarTitle = document.getElementById("sidebarTitle");
+    const addressForm = document.getElementById("addressForm");
+    const cancelBtn = document.getElementById("cancelBtn");
+
+    let editingCard = null; // keep track of the address being edited
+
+    function openSidebar(editing = false, card = null) {
+      sidebar.classList.add("active");
+      overlay.classList.add("active");
+      editingCard = card;
+
+      if (editing && card) {
+        sidebarTitle.innerText = "✏️ Edit Address";
+        // Prefill the form
+        document.getElementById("addrName").value = card.querySelector("h6").innerText.split(" ")[1];
+        document.getElementById("addrMobile").value = card.querySelector("p strong").nextSibling.textContent.replace("|", "").trim();
+        document.getElementById("addrStreet").value = card.querySelectorAll("p")[1].innerText;
+        document.getElementById("addrBuilding").value = card.querySelectorAll("p")[1].innerText;
+        document.getElementById("addrCity").value = card.querySelectorAll("p")[2].innerText;
+        document.getElementById("addrArea").value = card.querySelectorAll("p")[2].innerText;
+        document.getElementById("addrLandmark").value = card.querySelectorAll("p")[3].innerText;
+        // Check type
+        if(card.querySelector("h6").innerText.includes("Office")){
+          officeRadio.checked = true;
+          officeOptions.style.display = "block";
+        } else {
+          homeRadio.checked = true;
+          officeOptions.style.display = "none";
+        }
+      } else {
+        sidebarTitle.innerText = "➕ Add Address";
+        addressForm.reset();
+        officeOptions.style.display = "none";
+      }
+    }
+
+    function closeSidebarFunc() {
+      sidebar.classList.remove("active");
+      overlay.classList.remove("active");
+      editingCard = null;
+    }
+
+    addBtn.addEventListener("click", () => openSidebar());
+    closeSidebar.addEventListener("click", closeSidebarFunc);
+    overlay.addEventListener("click", closeSidebarFunc);
+
+    homeRadio.addEventListener("change", () => { officeOptions.style.display = "none"; });
+    officeRadio.addEventListener("change", () => { officeOptions.style.display = "block"; });
+
+    cancelBtn.addEventListener("click", closeSidebarFunc);
+
+    // Edit buttons
+    document.querySelectorAll(".edit-btn").forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        const card = e.target.closest(".address-card");
+        openSidebar(true, card);
+      });
+    });
+
+    // Form submit
+    addressForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      // For demo purposes just close sidebar
+      closeSidebarFunc();
+      alert(editingCard ? "Address updated!" : "Address added!");
+    });
+  </script>
+</body>
+</html>

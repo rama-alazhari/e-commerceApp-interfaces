@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categories</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/categories.css">
+</head>
+
+<body>
+ <!--  Header -->
+    <header class="fixed-top">
+        <div class="container-fluid">
+            <div class="d-flex align-items-center justify-content-between">
+
+                <!-- Mobile menu -->
+                <button class="btn d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+                    <i class="fa-solid fa-bars text-light fs-2"></i>
+                </button>
+
+                <!-- Logo -->
+                <div class="logo"><img src="image/WhatsApp_Image_2025-09-09_at_11.26.30_AM-removebg-preview.png"
+                        alt="Logo"></div>
+
+                <!-- Search (Desktop) -->
+                <div class="d-none d-md-block flex-grow-1 px-3">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search here...">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+
+                <!-- Icons -->
+                <div class="icons d-flex align-items-center">
+                  <a href="favorite.html"> <i class="far fa-heart fs-2 me-2"></i></a> 
+                  <a href="notifications.html"><i class="far fa-bell fs-2"></i></a>  
+                </div>
+            </div>
+
+            <!-- Search (Mobile) -->
+            <div class="d-md-none mt-2">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search here...">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+
+            <!-- Horizontal List -->
+            <div class="container-list mt-2">
+                <ul class="list">
+                    <li><a href="#">All Item Groups</a></li>
+                    <li><a href="#">CHINA</a></li>
+                    <li><a href="#">BABY CARE</a></li>
+                    <li><a href="#">GOD CARES</a></li>
+                    <li><a href="#">FRAINE KITCHEN</a></li>
+                    <li><a href="#">AGRIC EQUIPMENTS</a></li>
+                    <li><a href="#">WINE & SPIRITS</a></li>
+                    <li><a href="#">STATIONARY</a></li>
+                    <li><a href="#">KITCHEN WARE</a></li>
+                    <li><a href="#">DOG SECTION</a></li>
+                    <li><a href="#">SSEMPA INV</a></li>
+                    <li><a href="#">SOFT DRINKS</a></li>
+                    <li><a href="#">FRAGOLINO</a></li>
+                    <li><a href="#">SOAP & DETERGENTS</a></li>
+                    <li><a href="#">COSMETICS</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+  <!-- Categories Header -->
+  <div class="categories-header mt-5 pt-5">
+    <h2 class="mt-5 pt-3">Categories</h2>
+  </div>
+
+  <!-- Categories Page -->
+  <div class="categories-page">
+    <!-- Sidebar -->
+    <div class="categories-sidebar">
+      <ul>
+        <li class="active" data-category="women">Women</li>
+        <li data-category="men">Men</li>
+        <li data-category="kids">Kids</li>
+        <li data-category="beauty">Beauty</li>
+        <li data-category="accessories">Accessories</li>
+        <li data-category="shoes">Shoes</li>
+      </ul>
+    </div>
+
+    <!-- Content -->
+    <div class="categories-content">
+        <a href="all-product.html" class="text-decoration-none">
+      <div class="row g-3" id="subcategoryGrid">
+        <!-- Subcategories will be loaded here -->
+      </div>
+    </div>
+    </a>
+  </div>
+
+
+  <!-- Offcanvas Menu -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title fw-bold fs-3">Menu</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <hr>
+    <div class="offcanvas-body">
+      <ul class="list-unstyled">
+        <li class="border-bottom">
+          <a href="about.html" class="text-dark text-decoration-none d-block py-2 fs-5">
+            <i class="fas fa-info me-2 fs-3" style="color: #E90013;"></i> About Us
+          </a>
+        </li>
+        <li class="border-bottom mt-3">
+          <a href="privacy-policy.html" class="text-dark text-decoration-none d-block py-2 fs-5">
+            <i class="fas fa-lock me-2 fs-3" style="color: #E90013;"></i> Privacy Policy
+          </a>
+        </li>
+        <li class="border-bottom mt-3">
+          <a href="contactus.html" class="text-dark text-decoration-none d-block py-2 fs-5">
+            <i class="fas fa-envelope-open me-2 fs-3" style="color: #E90013;"></i> Contact Us
+          </a>
+        </li>
+        <li class="border-bottom mt-3">
+          <a href="setteing.html" class="text-dark text-decoration-none d-block py-2 fs-5">
+            <i class="fas fa-wrench me-2 fs-3" style="color: #E90013;"></i> Settings
+          </a>
+        </li>
+        <li class="mt-3">
+          <a href="login.html" class="text-dark text-decoration-none d-block py-2 fs-5">
+            <i class="fas fa-door-open me-2 fs-3" style="color: #E90013;"></i> Login
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+      <!-- --------- Footer----- -->
+    <footer>
+        <div class="nav-item ">
+            <a href="index.html">
+                <i class="fa-solid fa-store"></i>
+                <span>Shop</span>
+            </a>
+        </div>
+        <div class="nav-item active">
+            <a href="categories.html">
+                <i class="fa-solid fa-th-large"></i>
+                <span>Categories</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="trends.html">
+                <i class="fa-solid fa-fire"></i>
+                <span>Trends</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="cart.html">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span>Cart</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="profile.html">
+                <i class="fa-solid fa-user"></i>
+                <span>Profile</span>
+            </a>
+        </div>
+    </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!--  Footer Active Toggle -->
+    <script>
+        // تحديد الـ active بناءً على URL الصفحة الحالية
+        const currentPath = window.location.pathname.split("/").pop(); // مثلاً "profile.html"
+        const navLinks = document.querySelectorAll("footer .nav-item a");
+
+        navLinks.forEach(link => {
+            // إزالة الــactive من جميعها أولاً
+            link.classList.remove("active");
+            // إذا كان href يساوي الصفحة الحالية، أو إذا كان الرابط يعيد إلى index.html حين تكون الصفحة الرئيسية
+            const href = link.getAttribute("href");
+            if (href === currentPath || (href === "index.html" && (currentPath === "" || currentPath === "/"))) {
+                link.classList.add("active");
+            }
+        });
+
+    </script>
+  <script>
+    // Fake Subcategories Data
+    const subcategories = {
+      women: [
+        { name: "Dresses", img: "image/17567940391ca8b20e85304ed27a266ee1f89f83d8.webp" },
+        { name: "Tops", img: "image/17567940391ca8b20e85304ed27a266ee1f89f83d8.webp" },
+        { name: "Pants", img: "image/17567940391ca8b20e85304ed27a266ee1f89f83d8.webp" },
+        { name: "Jackets", img: "image/17567940391ca8b20e85304ed27a266ee1f89f83d8.webp" }
+      ],
+      men: [
+        { name: "T-Shirts", img: "image/17567940391ca8b20e85304ed27a266ee1f89f83d8.webp" },
+        { name: "Jeans", img: "image/17567940391ca8b20e85304ed27a266ee1f89f83d8.webp" },
+        { name: "Suits", img: "image/17567940391ca8b20e85304ed27a266ee1f89f83d8.webp" },
+        { name: "Hoodies", img: "image/17567940391ca8b20e85304ed27a266ee1f89f83d8.webp" }
+      ],
+      kids: [
+        { name: "Boys", img: "image/17567940391ca8b20e85304ed27a266ee1f89f83d8.webp" },
+        { name: "Girls", img: "image/17567940391ca8b20e85304ed27a266ee1f89f83d8.webp" },
+        { name: "Baby", img: "image/17567940391ca8b20e85304ed27a266ee1f89f83d8.webp" }
+      ],
+      beauty: [
+        { name: "Makeup", img: "image/17567940391ca8b20e85304ed27a266ee1f89f83d8.webp" },
+        { name: "Skincare", img: "image/17567940391ca8b20e85304ed27a266ee1f89f83d8.webp" },
+        { name: "Haircare", img: "image/17567940391ca8b20e85304ed27a266ee1f89f83d8.webp" }
+      ],
+      accessories: [
+        { name: "Bags", img: "image/17567940391ca8b20e85304ed27a266ee1f89f83d8.webp" },
+        { name: "Jewelry", img: "image/17567940391ca8b20e85304ed27a266ee1f89f83d8.webp" },
+        { name: "Watches", img: "image/17567940391ca8b20e85304ed27a266ee1f89f83d8.webp" }
+      ],
+      shoes: [
+        { name: "Sneakers", img: "image/17567940391ca8b20e85304ed27a266ee1f89f83d8.webp" },
+        { name: "Heels", img: "image/17567940391ca8b20e85304ed27a266ee1f89f83d8.webp" },
+        { name: "Boots", img: "image/17567940391ca8b20e85304ed27a266ee1f89f83d8.webp" }
+      ]
+    };
+
+    // Function to Load Subcategories
+    function loadSubcategories(category) {
+      const grid = document.getElementById("subcategoryGrid");
+      grid.innerHTML = "";
+      subcategories[category].forEach(item => {
+        grid.innerHTML += `
+          <div class="col-6 col-md-4">
+            <div class="subcategory-card">
+              <img src="${item.img}" alt="${item.name}">
+              <h6>${item.name}</h6>
+            </div>
+          </div>`;
+      });
+    }
+
+    // Initial Load
+    loadSubcategories("women");
+
+    // Sidebar Click Event
+    document.querySelectorAll(".categories-sidebar li").forEach(li => {
+      li.addEventListener("click", () => {
+        document.querySelectorAll(".categories-sidebar li").forEach(el => el.classList.remove("active"));
+        li.classList.add("active");
+        loadSubcategories(li.getAttribute("data-category"));
+      });
+    });
+  </script>
+</body>
+</html>

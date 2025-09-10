@@ -1,0 +1,53 @@
+ /* Header */
+    header {
+      opacity: 0.9;
+      background: #464646;
+      border-bottom: 1px solid #eee;
+      padding: 0.3rem 0.7rem;
+      width: 100%;
+    }
+
+    header.fixed-top {
+      z-index: 1050;
+    }
+
+    /* Logo */
+    .logo img {
+      height: 40px;
+    }
+
+    /* Icons */
+    .icons i {
+      font-size: 1.2rem;
+      margin-left: 12px;
+      cursor: pointer;
+      color: #ffffff;
+    }
+
+    /* Responsive adjustments */
+    @media(max-width:768px) {
+      .search-bar {
+        margin-top: 8px;
+      }
+
+      .icons i {
+        font-size: 1rem;
+        margin-left: 8px;
+      }
+
+      .logo img {
+        height: 38px;
+      }
+
+      .list li a {
+        font-size: 0.8rem;
+      }
+    }
+ .offcanvas {
+      z-index: 2000 !important;
+    }
+
+    .offcanvas-backdrop {
+      z-index: 1990 !important;
+      /* خلف القائمة */
+    }

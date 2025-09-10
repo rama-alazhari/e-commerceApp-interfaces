@@ -1,0 +1,37 @@
+/* -------Footer--------- */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px 0;
+    z-index: 1040;
+}
+
+footer .nav-item {
+    flex: 1;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #333;
+    cursor: pointer;
+}
+
+footer .nav-item i {
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 2px;
+}
+
+footer .nav-item a.active {
+    color: #E90013;
+    /* active color */
+    font-weight: bold;
+}
+.nav-item a{
+    text-decoration: none;
+     color: #333;
+}

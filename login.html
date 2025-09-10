@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login / Register</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet" />
+     <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: "Tajawal", sans-serif;
+      background-color: #ececec;
+      margin: 0;
+    }
+        /* Header */
+    header {
+      opacity: 0.9;
+      background: #464646;
+      border-bottom: 1px solid #eee;
+      padding: 0.3rem 0.7rem;
+      width: 100%;
+    }
+
+    header.fixed-top {
+      z-index: 1050;
+    }
+
+    /* Logo */
+    .logo img {
+      height: 40px;
+    }
+
+    /* Icons */
+    .icons i {
+      font-size: 1.2rem;
+      margin-left: 12px;
+      cursor: pointer;
+      color: #ffffff;
+    }
+
+    /* Responsive adjustments */
+    @media(max-width:768px) {
+      .search-bar {
+        margin-top: 8px;
+      }
+
+      .icons i {
+        font-size: 1rem;
+        margin-left: 8px;
+      }
+
+      .logo img {
+        height: 38px;
+      }
+
+      .list li a {
+        font-size: 0.8rem;
+      }
+    }
+     .offcanvas {
+      z-index: 2000 !important;
+    }
+
+    .offcanvas-backdrop {
+      z-index: 1990 !important;
+      /* خلف القائمة */
+    }
+
+    main {
+      padding-top: 20px;
+    }
+
+    .auth-card {
+      background: #fff;
+      border-radius: 5px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      padding: 20px;
+    }
+
+    .btn-main {
+      background: linear-gradient(45deg, #14A768, #E90013);
+      border: none;
+      border-radius: 12px;
+      padding: 12px;
+      color: #fff;
+      font-weight: bold;
+      width: 100%;
+    }
+
+    .switch-link { text-align: center; margin-top: 12px; font-size: 14px; }
+    .switch-link a { color: #14A768; font-weight: bold; text-decoration: none; }
+    .hidden { display: none; }
+
+    /* تحسينات للعرض على الهواتف */
+    @media (max-width: 575.98px) {
+      .site-header img { max-width: 90px; }
+      .auth-card { padding: 16px; }
+    }
+  </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <!--  Header -->
+  <header class="fixed-top">
+    <div class="container-fluid">
+      <div class="d-flex align-items-center justify-content-between">
+
+        <!-- Mobile menu -->
+        <button class="btn d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+          <i class="fa-solid fa-bars text-light fs-2"></i>
+        </button>
+
+        <!-- Logo -->
+        <div class="logo"><a href="/"><img src="image/WhatsApp_Image_2025-09-09_at_11.26.30_AM-removebg-preview.png"
+              alt="Logo"></a>
+        </div>
+
+        <!-- Icons -->
+        <div class="icons d-flex align-items-center">
+          <a href="favorite.html"> <i class="far fa-heart fs-2 me-2"></i></a>
+          <a href="notifications.html"> <i class="far fa-bell fs-2"></i></a>
+        </div>
+      </div>
+
+
+    </div>
+  </header>
+
+  <!-- المحتوى -->
+  <main class="container mt-5">
+    <div class="row justify-content-center gy-3">
+      <div class="col-12 col-sm-10 col-md-6 col-lg-4">
+        <div class="auth-card" id="loginCard">
+          <h3 class="mb-3 text-center">🔑 Login</h3>
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" placeholder="example@mail.com" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" class="form-control" placeholder="••••••••" />
+            </div>
+            <button type="submit" class="btn-main">Login</button>
+          </form>
+          <div class="switch-link">
+            Don't have an account? <a href="#" onclick="switchToRegister()">Register</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-10 col-md-6 col-lg-4 d-none" id="registerCard">
+        <div class="auth-card">
+          <h3 class="mb-3 text-center">📝 Register</h3>
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Full Name</label>
+              <input type="text" class="form-control" placeholder="Your name" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" placeholder="example@mail.com" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" class="form-control" placeholder="••••••••" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Gender</label>
+              <div class="d-flex gap-3">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="gender" id="male">
+                  <label class="form-check-label" for="male">👨 Male</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="gender" id="female">
+                  <label class="form-check-label" for="female">👩 Female</label>
+                </div>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" placeholder="xxxxxxxxx">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Date of Birth</label>
+              <input type="date" class="form-control">
+            </div>
+            <button type="submit" class="btn-main">Create Account</button>
+          </form>
+          <div class="switch-link">
+            Already have an account? <a href="#" onclick="switchToLogin()">Login</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+   <!-- Offcanvas Menu -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title fw-bold fs-3">Menu</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <hr>
+
+    <div class="offcanvas-body">
+      <ul class="list-unstyled">
+        <li class="border-bottom">
+          <a href="about.html" class="text-dark text-decoration-none d-block py-2 fs-5">
+            <i class="fas fa-info me-2 fs-3" style="color: #E90013;"></i> About Us
+          </a>
+        </li>
+        <li class="border-bottom mt-3">
+          <a href="privacy-policy.html" class="text-dark text-decoration-none d-block py-2 fs-5">
+            <i class="fas fa-lock me-2 fs-3" style="color: #E90013;"></i> Privacy Policy
+          </a>
+        </li>
+        <li class="border-bottom mt-3">
+          <a href="contactus.html" class="text-dark text-decoration-none d-block py-2 fs-5">
+            <i class="fas fa-envelope-open me-2 fs-3" style="color: #E90013;"></i> Contact Us
+          </a>
+        </li>
+        <li class="border-bottom mt-3">
+          <a href="setteing.html" class="text-dark text-decoration-none d-block py-2 fs-5">
+            <i class="fas fa-wrench me-2 fs-3" style="color: #E90013;"></i> Settings
+          </a>
+        </li>
+        <li class="mt-3">
+          <a href="login.html" class="text-dark text-decoration-none d-block py-2 fs-5">
+            <i class="fas fa-door-open me-2 fs-3" style="color: #E90013;"></i> Login
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const loginCard = document.getElementById("loginCard");
+    const registerCard = document.getElementById("registerCard");
+
+    function switchToRegister() {
+      loginCard.parentElement.classList.add("d-none");
+      registerCard.classList.remove("d-none");
+    }
+    function switchToLogin() {
+      registerCard.classList.add("d-none");
+      loginCard.parentElement.classList.remove("d-none");
+    }
+  </script>
+</body>
+</html>

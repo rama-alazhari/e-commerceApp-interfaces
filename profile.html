@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/profile.css">
+  <link rel="stylesheet" href="css/header.css">
+
+
+</head>
+
+<body>
+  <!--  Header -->
+  <header class="fixed-top">
+    <div class="container-fluid">
+      <div class="d-flex align-items-center justify-content-between">
+
+        <!-- Mobile menu -->
+        <button class="btn d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+          <i class="fa-solid fa-bars text-light fs-2"></i>
+        </button>
+
+        <!-- Logo -->
+        <div class="logo"><a href="/"><img src="image/WhatsApp_Image_2025-09-09_at_11.26.30_AM-removebg-preview.png"
+              alt="Logo"></a>
+        </div>
+
+        <!-- Icons -->
+        <div class="icons d-flex align-items-center">
+          <a href="favorite.html"> <i class="far fa-heart fs-2 me-2"></i></a>
+          <a href="notifications.html"> <i class="far fa-bell fs-2"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Sub-header under main header -->
+  <div class="sub-header bg-light shadow-sm py-3 mt-5 pt-5">
+    <div class="container d-flex justify-content-between align-items-center ps-5 pe-5 pt-2">
+      <a href="profile.html" class="sub-header-link active fw-bold">Profile</a>
+      <span class="fs-1" style="color: #555;">|</span>
+      <a href="my-orders.html" class="sub-header-link fw-bold">My Orders</a>
+    </div>
+  </div>
+
+  <!-- --------main-------- -->
+  <main>
+    <div class="container shadow-sm p-3 bg-body rounded mt-5">
+      <div class="title p-3 rounded">
+        <h2>Profile Information</h2>
+        <p>Update Your account's profile Information and email address.</p>
+      </div>
+      <form class="mt-4 shadow-sm p-3">
+        <label>Full Name</label>
+        <div class="search-bar">
+          <i class="fas fa-user"></i>
+          <input class="rounded" type="text">
+        </div>
+
+        <label class="mt-3">Email Address</label>
+        <div class="search-bar">
+          <i class="far fa-envelope"></i>
+          <input class="rounded" type="text">
+        </div>
+
+        <label class="mt-3">Phone Number</label>
+        <div class="search-bar">
+          <i class="fas fa-phone"></i>
+          <input class="rounded" type="text">
+        </div>
+
+        <label class="mt-3">Date Of Birth</label>
+        <div class="search-bar">
+          <i class="fas fa-calendar"></i>
+          <input class="rounded" type="text">
+        </div>
+
+        <label class="mt-3">TIN (Tax Identification Number)</label>
+        <div class="search-bar">
+          <i class="fas fa-id-card"></i>
+          <input class="rounded" type="text">
+        </div>
+        <div style="width: 100%; text-align: center;">
+          <button class="btn shadow-sm mt-4 text-light btn-profile" style="background-color:#14A768">Save profile
+            Changes</button>
+
+        </div>
+      </form>
+    </div><!-- container -->
+
+    <div class="container shadow-sm p-3 mb-5 bg-body rounded">
+      <div class="title p-3 rounded">
+        <h2>Change Password</h2>
+        <p>Update your account password</p>
+      </div>
+      <form class="mt-4 shadow-sm p-3">
+        <label>Current Password</label>
+        <div class="search-bar">
+          <i class="fas fa-lock"></i>
+          <input class="rounded" type="password">
+        </div>
+        <label> New Password</label>
+        <div class="search-bar">
+          <i class="fas fa-lock"></i>
+          <input class="rounded" type="password">
+        </div>
+        <div style="width: 100%; text-align: center;">
+          <button class="btn  shadowy-sm mt-4 text-light btn-profile" style="background-color: #14A768;">Change
+            Password</button>
+
+        </div>
+      </form>
+    </div>
+
+    <div class="container shadow-sm p-3 mb-5 bg-body rounded">
+      <div class="title p-3 rounded">
+        <h2>Delete Account</h2>
+        <p>Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting
+          your account, please download any data or information that you wish to retain.</p>
+      </div>
+      <div style="width: 100%; text-align: center;">
+        <button class="btn shadowy-sm mt-4 text-light btn-profile" style="background-color: #E90013;">DELETE
+          ACCOUNT</button>
+      </div>
+    </div>
+  </main>
+
+
+
+  <!-- --------- Footer----- -->
+  <footer>
+    <div class="nav-item ">
+      <a href="index.html">
+        <i class="fa-solid fa-store"></i>
+        <span>Shop</span>
+      </a>
+    </div>
+    <div class="nav-item">
+      <a href="categories.html">
+        <i class="fa-solid fa-th-large"></i>
+        <span>Categories</span>
+      </a>
+    </div>
+    <div class="nav-item">
+      <a href="trends.html">
+        <i class="fa-solid fa-fire"></i>
+        <span>Trends</span>
+      </a>
+    </div>
+    <div class="nav-item">
+      <a href="cart.html">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span>Cart</span>
+      </a>
+    </div>
+    <div class="nav-item active">
+      <a href="profile.html">
+        <i class="fa-solid fa-user"></i>
+        <span>Profile</span>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Offcanvas Menu -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title fw-bold fs-3">Menu</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <hr>
+
+    <div class="offcanvas-body">
+      <ul class="list-unstyled">
+        <li class="border-bottom">
+          <a href="about.html" class="text-dark text-decoration-none d-block py-2 fs-5">
+            <i class="fas fa-info me-2 fs-3" style="color: #E90013;"></i> About Us
+          </a>
+        </li>
+        <li class="border-bottom mt-3">
+          <a href="privacy-policy.html" class="text-dark text-decoration-none d-block py-2 fs-5">
+            <i class="fas fa-lock me-2 fs-3" style="color: #E90013;"></i> Privacy Policy
+          </a>
+        </li>
+        <li class="border-bottom mt-3">
+          <a href="contactus.html" class="text-dark text-decoration-none d-block py-2 fs-5">
+            <i class="fas fa-envelope-open me-2 fs-3" style="color: #E90013;"></i> Contact Us
+          </a>
+        </li>
+        <li class="border-bottom mt-3">
+          <a href="setteing.html" class="text-dark text-decoration-none d-block py-2 fs-5">
+            <i class="fas fa-wrench me-2 fs-3" style="color: #E90013;"></i> Settings
+          </a>
+        </li>
+        <li class="mt-3">
+          <a href="login.html" class="text-dark text-decoration-none d-block py-2 fs-5">
+            <i class="fas fa-door-open me-2 fs-3" style="color: #E90013;"></i> Login
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!--  Footer Active Toggle -->
+  <script>
+    // تحديد الـ active بناءً على URL الصفحة الحالية
+    const currentPath = window.location.pathname.split("/").pop(); // مثلاً "profile.html"
+    const navLinks = document.querySelectorAll("footer .nav-item a");
+
+    navLinks.forEach(link => {
+      // إزالة الــactive من جميعها أولاً
+      link.classList.remove("active");
+      // إذا كان href يساوي الصفحة الحالية، أو إذا كان الرابط يعيد إلى index.html حين تكون الصفحة الرئيسية
+      const href = link.getAttribute("href");
+      if (href === currentPath || (href === "index.html" && (currentPath === "" || currentPath === "/"))) {
+        link.classList.add("active");
+      }
+    });
+
+    // تبقي الـ behavior عند النقر كما هو دون تغيير
+    navLinks.forEach(item => {
+      item.addEventListener("click", () => {
+        navLinks.forEach(el => el.classList.remove("active"));
+        item.classList.add("active");
+      });
+    });
+  </script>
+</body>
+
+</html>
